@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+    <script src="app/controllers/account/login.controller.js"></script>
+    <script src="app/controllers/account/register.controller.js"></script>
+    <script src="app/controllers/common/gate.controller.js"></script>
+    <script src="app/controllers/common/common.controller.js"></script>
+    <script src="app/controllers/home/home.controller.js"></script>
+  </head>
+  <body ng-app="heliounce" ng-controller="heliounce.common">
+    <ion-side-menus>
+    <!-- Left menu -->
+        <ion-side-menu side="left" width="220">
+            <ion-content class="side-menu" scrollbar-x="false" scrollbar-y="false">
+                <ion-item menu-close="" class="side-menu" ng-click="goHome()">
+                    <i class="icon ion-ios-home-outline"><br>
+                        <span class="side-menu">HOME</span>
+                    </i>
+                </ion-item>
+                <ion-item menu-close="" class="side-menu" ng-click="askAdmin()">
+                    <i class="icon ion-ios-person-outline"><br>
+                        <span class="side-menu">PROFILE</span>
+                    </i>
+                </ion-item>
+                <ion-item menu-close="" class="side-menu" ng-click="askAdmin()">
+                    <i class="icon ion-ios-plus-outline"><br>
+                        <span class="side-menu">SUGGEST PLACE</span>
+                    </i>
+                </ion-item>
+                <ion-item menu-close="" class="side-menu" ng-click="askAdmin()">
+                    <i class="icon ion-social-usd-outline"><br>
+                        <span class="side-menu">REWARDS</span>
+                    </i>
+                </ion-item>
+                <ion-item menu-close="" class="side-menu" ng-click="logout()">
+                    <i class="icon ion-log-out"><br>
+                        <span class="side-menu">SIGN OUT</span>
+                    </i>
+                </ion-item>
+            </ion-content>
+        </ion-side-menu>
+
+        <ion-side-menu-content edge-drag-threshold="true" drag-content="false">
+            <!-- Main content, usually <ion-nav-view> -->
+            <ion-nav-view>
+            </ion-nav-view>
+        </ion-side-menu-content>
+
+        <!-- Right menu -->
+        <ion-side-menu side="right" width="220">
+            <ion-content class="side-menu" scrollbar-x="false" scrollbar-y="false">
+                <ion-list>
+                    <ion-item menu-close="" class="side-menu" ng-click="goHome()">
+                        <i class="icon ion-android-restaurant"></i><br/>
+                        <span class="side-menu">FOOD</span>
+                    </ion-item>
+                    <ion-item menu-close="" class="side-menu" ng-click="askAdmin()">
+                        <i class="icon ion-model-s"><br>
+                            <span class="side-menu">PUNCTURE</span>
+                        </i>
+                    </ion-item>
+                    <ion-item menu-close="" class="side-menu" ng-click="logout()">
+                        <i class="icon ion-wrench"><br>
+                            <span class="side-menu">MECHANIC</span>
+                        </i>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu>
+
+    </ion-side-menus>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+// File Name: _fonts.scss
+// Description: File for font declarations
+// Used by: main.scss
+// ------------------------------------------------------------
+
+@font-face {
+    font-family: opensans;
+    src: url('../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: opensans-regular;
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: opensans-bold;
+    src: url('../fonts/OpenSans-Bold.ttf');
+}

@@ -1,0 +1,106 @@
+// File Name: _gate.scss
+// Description: File for styles related to the gate page.
+// Used by: main.scss
+// ------------------------------------------------------------
+
+$gate-logo-default-opacity: 0.35;
+$gate-logo-default-font-size: 25px;
+$gate-btn-signin-color:#74777C;
+$gate-btn-register-color:#74777C;
+
+div {
+	&.#{$hic-css-prefix}-gate {
+		background-image: url('../img/city-night-evening-river.jpg');
+		@extend .animate-background-move-left;
+
+		div {
+			&.#{$hic-css-prefix}-gate-logo-container {
+				margin-top: 35%;
+			}
+		}
+	}
+}
+
+h1 {
+	&.#{$hic-css-prefix}-gate-logo {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+
+		span {
+			text-transform: uppercase;
+			color: $global-title-color;
+			font-size: $gate-logo-default-font-size;
+			letter-spacing: 0.2em;
+			font-family:opensans;
+		}
+	}	
+}
+
+span {
+	&.#{$hic-css-prefix}-gate-text-flip {
+		&.#{$hic-css-prefix}-gate-text-flip-highlight {
+			color: $global-title-color;
+			opacity: 0.8;		
+		}
+	}
+}
+
+div {
+	&.#{$hic-css-prefix}-gate-buttons-container {
+		 bottom: 0;
+	    margin-bottom: 20px;
+	    position: absolute;
+	    width: 100%;
+	}
+}
+
+div {
+	&.#{$hic-css-prefix}-gate-buttons {
+		width:220px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+}
+
+button {
+	&.#{$hic-css-prefix}-gate-signin, &.#{$hic-css-prefix}-gate-register {
+		padding: 4px;
+		min-height:30px;
+		font-size:0.875em;
+		line-height:1.75em;
+		font-family:opensans-bold;
+	}
+}
+
+button {
+	&.#{$hic-css-prefix}-gate-signin.md-button {
+		color: $gate-btn-signin-color;
+	}
+
+	&.#{$hic-css-prefix}-gate-register.md-button {
+		color: $gate-btn-register-color;
+	}
+}
+
+
+// Responseive media queries
+@media  (min-width: 320px) {
+	h1 {
+		&.#{$hic-css-prefix}-gate-logo {
+			span {
+				letter-spacing: 0.2em;
+			}
+		}	
+	}
+}
+
+@media  (max-width: 319px) {
+	h1 {
+		&.#{$hic-css-prefix}-gate-logo {
+			span {
+				letter-spacing: 0.1em;
+			}
+		}	
+	}	
+}

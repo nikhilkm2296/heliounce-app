@@ -1,0 +1,57 @@
+// File Name: _blue.scss
+// Description: File for Blue theme of the application.
+// Used by: main.scss
+// ------------------------------------------------------------
+$global-title-color: #00AEEF;
+$gate-btn-register-color: #FFF;
+$gate-btn-register-bg-color: #00AEEF;
+$global-header-title-color: #5FBFF9;
+
+.blue {
+	span {
+		&.#{$hic-css-prefix}-gate-text-flip {
+			&.#{$hic-css-prefix}-gate-text-flip-highlight {
+				color: $global-title-color;
+			}
+		}
+	}
+
+	div {
+		&.#{$hic-css-prefix}-gate-buttons {
+			button {
+				&.#{$hic-css-prefix}-gate-register {
+					color: $gate-btn-register-color;
+					background-color: $gate-btn-register-bg-color;
+					&:hover:not([disabled]), &:focus {
+						color: $gate-btn-register-color;
+						background-color: $gate-btn-register-bg-color;
+						opacity:0.8;
+					}
+				}
+			}
+		}
+	}
+
+	div {
+		&.title {
+				&.#{$hic-css-prefix}-header-main {
+				color: $global-header-title-color;
+				font-size: $header-main-font-size;
+				font-family:opensans-regular;
+			}
+		}
+	}
+
+	.bar {
+		&.bar-footer {
+			&.#{$hic-css-prefix}-footer-container {
+				.tabs {
+					.tab-item.tab-item-active,
+					.tab-item.active, .tab-item.activated {
+						color: $global-title-color;
+					}
+				}
+			}
+		}
+	}
+}

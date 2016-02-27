@@ -1,0 +1,42 @@
+<ion-pane>
+	<ion-header-bar align-title="center">
+	  <button class="button button-clear hic-header-xtreme icon ion-navicon" ng-click="toggleLeft()"></button>
+	  <div class="h1 title hic-header-main">HELIOUNCE</div>
+	  <button class="button button-clear hic-header-xtreme icon ion-navicon" ng-click="toggleRight()"></button>
+	</ion-header-bar>
+	<ion-slides options="vm.home.options" slider="vm.home.data.slider">
+	  <ion-slide-page ng-repeat="image in vm.home.carouselList">
+	    <div class="box">
+	    	<img ng-src="{{ image }}" height="50%" width="100%" />
+	    </div>
+	  </ion-slide-page>
+	</ion-slides>
+	<ion-scroll style="height:60%">
+	<div class="hic-home">
+		<div class="list">
+		    <a class="item item-thumbnail-left" ng-repeat="place in vm.home.places">
+		      <img src="{{ place.image }}">
+		      <div class="hic-home-place-info-container">
+			      <h2 class="hic-home-place-title">
+			      	{{ place.name }}
+			      	<div class="hic-home-place-rating">
+				      	<span class="hic-home-place-rating">
+				      		{{ place.rating }} 
+				      	</span>
+			      	</div>
+			      </h2>
+			      <hr class="hic-home-hr" />
+			      <h3 class="hic-home-place-pricing">
+			      	<span class="hic-home-place-distance">
+				      	{{ place.distance }} km
+			      	</span>
+			      	<span class="hic-home-pricing">
+			      		<i class="hic-home icon ion-card"></i>  {{ place.pricing }}
+			      	</span>
+			      </h3>
+		      </div>
+		    </a>
+		</div>
+	</ion-scroll>
+	</div>
+</ion-pane>

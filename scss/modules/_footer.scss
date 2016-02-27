@@ -1,0 +1,30 @@
+// File Name: _footer.scss
+// Description: File for styles related to the footers
+// Used by: main.scss
+// ------------------------------------------------------------
+
+.bar {
+	&.bar-footer {
+		&.#{$hic-css-prefix}-footer-container {
+			margin-left: 0px;
+			margin-right: 0px;
+			padding: 0px;
+			.tabs {
+				background: none;
+				height:43px;
+				line-height:43px;
+
+				.tab-item {
+					line-height:25px;
+					text-decoration:none;
+					.icon {
+						font-size: 1.75em;
+					    height: 19px;
+					    line-height:1.7em;
+					}
+				}
+			}
+		}
+	}
+}
+

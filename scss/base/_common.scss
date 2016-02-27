@@ -1,0 +1,126 @@
+$gate-logo-default-opacity: 0.35;
+$gate-logo-default-font-size: 20px;
+$global-header-title-color: #00AEEF;
+$gate-btn-register-bg-color: #00AEEF;
+
+@import 'variables';
+
+.vertical-middle {
+  width: 100%;
+  margin: auto;
+}
+
+i {
+	&.icon {
+		font-size: $global-icon-size;
+	}
+}
+
+.item {
+	color: $global-title-color;
+	text-align: center;
+	font-size: $gate-logo-default-font-size;
+
+	&.activated {
+		background-color: $global-title-color;
+		color: $global-text-color;
+	}
+
+	&.item-thumbnail-left {
+		color: $global-title-color;
+		&.activated {
+			background-color: $global-bg-color;
+			color: $global-text-color;
+		}
+	}
+}
+
+span {
+	&.swiper-pagination-bullet {
+		background: $global-title-color;
+	}
+
+	&.side-menu {
+		font-size: $global-icon-text-size;
+		letter-spacing: 0.1em;
+	}
+}
+
+ion-slides {	
+	height: 40%;
+	display: grid;
+}
+
+.common-text-style {
+	text-transform: uppercase;
+	color: $global-text-color;
+	font-size: $gate-logo-default-font-size;
+	letter-spacing: 0.2em;
+	font-weight: bold;
+    font-family: opensans-regular;
+}
+
+button {
+	&.hic-buttons {
+		@extend .common-text-style;
+		color: $global-second-text-color;
+		width: 180px;
+		font-size: $global-text-size;
+
+		&.highlight-blue {
+			background: $gate-btn-register-bg-color;
+			color: $global-text-color;
+		}
+	}
+}
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+
+.item-input input {
+	@extend .common-text-style;
+	color: $global-text-color;
+    text-transform: none;
+}
+
+.item-floating-label .input-label.has-input {
+	@extend .common-text-style;
+	color: $global-title-color;
+}
+
+.animate-background-move-left {
+	from { background-position: bottom left }
+	to { background-position: center }
+	-webkit-animation: mymove 8s 0.5; /* Chrome, Safari, Opera */
+	animation: mymove 8s 0.5;
+}
+
+.animate-background-zoom-in {
+	background-position: center;
+	background-size: 100% 100%;
+    -webkit-animation: zoom 5s infinite; /* Chrome, Safari, Opera */
+    animation: zoom 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes zoom {
+    50% {background-size: 130% 130%;}
+}
+
+/* Standard syntax */
+@keyframes move-left {
+    50% {background-size: 130% 130%;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes move-left {
+    50% {background-position: center;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {background-position: center;}
+}

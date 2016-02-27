@@ -1,0 +1,39 @@
+// File Name: _header.scss
+// Description: File for styles related to the headers
+// Used by: main.scss
+// ------------------------------------------------------------
+
+$header-xtreme-font-size: 8px;
+$header-main-font-size: 22px;
+$header-xtreme-icon-font-size: 1em;
+
+.button {
+	&.button-clear {
+		&.#{$hic-css-prefix}-header-xtreme {
+			color: $global-title-color;
+			font-size: $header-xtreme-font-size;
+			font-family:opensans-bold;
+			font-weight: bolder;
+			letter-spacing: 0.2em;
+		}
+	}
+}
+
+.button {
+	&.button-icon.icon {
+		&.#{$hic-css-prefix}-header-xtreme-icon::before {
+			color: $global-active-link-color;
+			font-size: $header-xtreme-icon-font-size;
+		}
+	}
+}
+
+div {
+	&.title {
+			&.#{$hic-css-prefix}-header-main {
+			color: $global-title-color;
+			font-size: $header-main-font-size;
+			font-family:opensans-regular;
+		}
+	}
+}

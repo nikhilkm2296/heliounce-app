@@ -1,0 +1,74 @@
+$gate-logo-default-opacity: 0.35;
+$gate-logo-default-font-size: 25px;
+$gate-btn-signin-color:#74777C;
+$gate-btn-register-color:#74777C;
+
+
+h1 {
+	&.#{$hic-css-prefix}-account-logo {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+
+		span {
+			font-weight: bolder;
+			letter-spacing: 0.3em;
+			font-size: $gate-logo-default-font-size;
+			@extend .common-text-style;
+			color: $global-title-color;
+		}
+	}	
+}
+
+
+div {
+	&.#{$hic-css-prefix}-login {
+		background-image: url('../img/road-street-blur-blurred.jpg');
+	    background-position: center;
+	    background-size: auto;
+	    // background: $global-bg-color;
+
+		&.form-container {
+			margin-top: 30%;
+			margin-bottom: 20px;
+			opacity: 0.6;
+		}
+	}
+
+	&.#{$hic-css-prefix}-login {
+		&.list {
+			background: black;
+		}
+
+		&.-logo {
+			color: $global-title-color;
+		}
+	}
+
+	&.#{$hic-css-prefix}-account-logo-container {
+		color: $global-active-link-color;
+		margin-top: 20%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+button {
+	&.#{$hic-css-prefix}-account-signin, &.#{$hic-css-prefix}-account-register {
+		padding: 4px;
+		min-height:30px;
+		font-size:0.875em;
+		line-height:1.75em;
+		font-family:opensans-bold;
+	}
+}
+
+button {
+	&.#{$hic-css-prefix}-account-signin.md-button {
+		color: $gate-btn-signin-color;
+	}
+
+	&.#{$hic-css-prefix}-account-register.md-button {
+		color: $gate-btn-register-color;
+	}
+}

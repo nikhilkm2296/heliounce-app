@@ -1,0 +1,78 @@
+.common-text-style-place-home {
+	text-align: left;
+    font-family: opensans-regular;
+    height: 32px;
+    line-height: 32px;
+}
+
+#{$hic-css-prefix}-home {
+	position: absolute;
+}
+
+div {
+	&.#{$hic-css-prefix}-home-place-info-container {
+		padding: 5px;
+		text-align: left;
+	}
+
+	&.#{$hic-css-prefix}-home-place-rating {
+		float: right;
+		background-color: $global-title-color;
+		border-radius: 12px;
+		color: $global-text-color;
+		width: 15%;
+		text-align: center;
+	}
+}
+
+hr {
+	&.hic-home-hr {
+		background: $global-title-color;
+		opacity: 0.4;
+	}
+}
+
+h2 {
+	&.#{$hic-css-prefix}-home-place-title {
+		color: $global-title-color;
+		margin: 5px;
+		@extend .common-text-style-place-home;
+	}
+}
+
+span {
+	&.#{$hic-css-prefix}-home-place-rating {
+		@extend .common-text-style-place-home;
+		float: right;
+		border-width: 2px;
+		border-color: $global-title-color;
+		text-align: center;
+    	width: 95%;
+    	margin-right: auto;
+    	margin-left: auto;
+	}
+
+	&.#{$hic-css-prefix}-home-place-distance {
+		text-align: center;
+		float: right;
+		padding: 3px;
+		color: $global-title-color;
+	}
+
+	&.#{$hic-css-prefix}-home-pricing {
+		padding: 2px;
+	}
+}
+
+h3 {
+	&.#{$hic-css-prefix}-home-place-pricing {
+		@extend .common-text-style-place-home;
+		color: $global-title-color;
+	}
+}
+
+i {
+	&.#{$hic-css-prefix}-home {
+		font-size: medium;
+	}
+}

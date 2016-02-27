@@ -1,0 +1,29 @@
+<ion-pane class="has-header">
+    <div class="hic-login full-screen">
+        <div class="hic-account-logo-container">
+            <h1 class="hic-account-logo text-center">
+                <span>HELIOUNCE</span>
+            </h1>
+        </div>
+        <div class="hic-login form-container vertical-middle">
+            <div class="hic-login list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Username</span>
+                <input type="text" placeholder="Username" ng-model="vm.login.credentials.username" ng-minlength="5" ng-maxlength="15" required>
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="hic-login input-label">Password</span>
+                <input type="password" placeholder="Password" ng-model="vm.login.credentials.password" ng-minlength="5" ng-maxlength="15" required>
+            </label>
+            </div>
+            <div class="hic-account-buttons-container text-center footer">
+                <button class="hic-buttons highlight-blue button" ng-click="vm.signin()">
+                    SIGN IN
+                </button>
+                <button class="hic-buttons button" ng-click="vm.register()">
+                    REGISTER
+                </button>
+            </div> 
+        </div>
+    </div>
+</ion-pane>
