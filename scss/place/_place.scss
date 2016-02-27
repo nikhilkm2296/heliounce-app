@@ -1,0 +1,66 @@
+.common-text-style-place {
+	text-transform: uppercase;
+	color: $global-title-color;
+	text-align: left;
+    font-family: opensans-regular;
+    height: 32px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+}
+
+div {
+	&.#{$hic-css-prefix}-place {
+
+		&-facility-icon {
+			margin-left: 3px;
+			@extend .common-text-style-place;
+			border-width: 1px;
+			border-color: $global-text-color;
+			border-style: solid;
+			border-radius: 50%;
+			width: 65px;
+			height: 60px;
+			background: #ff4c4c;
+			color: $global-text-color;
+
+			&.available {
+				background : #00b300;
+			}
+		}
+
+		&-facility {
+			&.row {
+				width: 95%;
+				margin: auto;
+			}
+		}
+	}
+}
+
+span {
+	&.#{$hic-css-prefix}-place {
+		text-align: center;
+		width: 95%;
+
+		&-header-info {
+			text-align: left;
+			@extend .common-text-style-place;
+		}
+
+		&-text-info {
+			@extend .common-text-style-place;
+			text-transform: none;
+			font-size: 18px;
+		}
+	}
+}
+
+i {
+	&.#{$hic-css-prefix}-place {
+		&.icon {
+			display: table;
+			margin: 0 auto;
+			margin-top: 20%;
+		}
+	}
+}

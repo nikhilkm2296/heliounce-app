@@ -20909,6 +20909,46 @@ h3.hic-home-place-pricing {
 i.hic-home {
   font-size: medium; }
 
+.common-text-style-place, div.hic-place-facility-icon, span.hic-place-header-info, span.hic-place-text-info {
+  text-transform: uppercase;
+  color: #00AEEF;
+  text-align: left;
+  font-family: opensans-regular;
+  height: 32px;
+  line-height: 32px;
+  letter-spacing: 0.1em; }
+
+div.hic-place-facility-icon {
+  margin-left: 3px;
+  border-width: 1px;
+  border-color: #FFF;
+  border-style: solid;
+  border-radius: 50%;
+  width: 65px;
+  height: 60px;
+  background: #ff4c4c;
+  color: #FFF; }
+  div.hic-place-facility-icon.available {
+    background: #00b300; }
+
+div.hic-place-facility.row {
+  width: 95%;
+  margin: auto; }
+
+span.hic-place {
+  text-align: center;
+  width: 95%; }
+  span.hic-place-header-info {
+    text-align: left; }
+  span.hic-place-text-info {
+    text-transform: none;
+    font-size: 18px; }
+
+i.hic-place.icon {
+  display: table;
+  margin: 0 auto;
+  margin-top: 20%; }
+
 .blue span.hic-gate-text-flip.hic-gate-text-flip-highlight {
   color: #00AEEF; }
 

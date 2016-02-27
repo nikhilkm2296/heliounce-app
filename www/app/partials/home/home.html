@@ -14,7 +14,7 @@
 	<ion-scroll style="height:60%">
 	<div class="hic-home">
 		<div class="list">
-		    <a class="item item-thumbnail-left" ng-repeat="place in vm.home.places">
+		    <a class="item item-thumbnail-left" ng-repeat="place in vm.home.places" ng-click="vm.home.setSelectedPlace(place)">
 		      <img src="{{ place.image }}">
 		      <div class="hic-home-place-info-container">
 			      <h2 class="hic-home-place-title">

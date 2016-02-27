@@ -4,15 +4,20 @@ var controllername = 'home';
 var fullname = 'heliounce.' + controllername;
 /*jshint validthis: true */
 
-var deps = [ '$scope' ];
+var deps = [ '$scope', '$location', 'heliounce.PlaceService' ];
 
 
-function controller( $scope ) {
+function controller( $scope, $location, PlaceService ) {
     var vm = this;
     vm.controllername = fullname;
 
     vm.home = {};
     vm.home.places = [];
+
+    vm.home.setSelectedPlace = function(place) {
+        PlaceService.setSelectedPlace(place);
+        $location.path('/place');
+    };
 
     var place = {};
     place.name = "Nanda's Golgappa Shop";
@@ -21,6 +26,13 @@ function controller( $scope ) {
     place.distance = "2.5";
     place.rating = "3.7";
     place.pricing = "50 for 2";
+    place.disabledFriendly = true;
+    place.parking = true;
+    place.cardAvailable = true;
+    place.wifiAvailable = true;
+    place.images = [];
+    place.images.push("img/food-salad-healthy-vegetables.jpg");
+    place.images.push("img/city-night-evening-river.jpg");
     place.image = "img/food-salad-healthy-vegetables.jpg";
 
     vm.home.places.push(place);
@@ -32,6 +44,13 @@ function controller( $scope ) {
     place.distance = "3.2";
     place.rating = "3.6";
     place.pricing = "50 for 2";
+    place.disabledFriendly = true;
+    place.parking = true;
+    place.cardAvailable = true;
+    place.wifiAvailable = true;
+    place.images = [];
+    place.images.push("img/food-salad-healthy-vegetables.jpg");
+    place.images.push("img/city-night-evening-river.jpg");
     place.image = "img/food-salad-healthy-vegetables.jpg";
 
     vm.home.places.push(place);
@@ -43,6 +62,13 @@ function controller( $scope ) {
     place.distance = "4.2";
     place.rating = "3.5";
     place.pricing = "50 for 2";
+    place.disabledFriendly = true;
+    place.parking = true;
+    place.cardAvailable = true;
+    place.wifiAvailable = true;
+    place.images = [];
+    place.images.push("img/food-salad-healthy-vegetables.jpg");
+    place.images.push("img/city-night-evening-river.jpg");
     place.image = "img/food-salad-healthy-vegetables.jpg";
 
     vm.home.places.push(place);
@@ -54,6 +80,13 @@ function controller( $scope ) {
     place.distance = "2.8";
     place.rating = "3.5";
     place.pricing = "50 for 2";
+    place.disabledFriendly = true;
+    place.parking = true;
+    place.cardAvailable = true;
+    place.wifiAvailable = true;
+    place.images = [];
+    place.images.push("img/food-salad-healthy-vegetables.jpg");
+    place.images.push("img/city-night-evening-river.jpg");
     place.image = "img/food-salad-healthy-vegetables.jpg";
 
     vm.home.places.push(place);
@@ -66,6 +99,13 @@ function controller( $scope ) {
     place.distance = "2.8";
     place.rating = "3.5";
     place.pricing = "50 for 2";
+    place.disabledFriendly = true;
+    place.parking = true;
+    place.cardAvailable = true;
+    place.wifiAvailable = true;
+    place.images = [];
+    place.images.push("img/food-salad-healthy-vegetables.jpg");
+    place.images.push("img/city-night-evening-river.jpg");
     place.image = "img/food-salad-healthy-vegetables.jpg";
 
     vm.home.places.push(place);
@@ -78,6 +118,9 @@ function controller( $scope ) {
     place.distance = "2.8";
     place.rating = "4.5";
     place.pricing = "50 for 2";
+    place.images = [];
+    place.images.push("img/food-salad-healthy-vegetables.jpg");
+    place.images.push("img/city-night-evening-river.jpg");
     place.image = "img/food-salad-healthy-vegetables.jpg";
 
     vm.home.places.push(place);
@@ -90,6 +133,9 @@ function controller( $scope ) {
     place.distance = "2.8";
     place.rating = "3.5";
     place.pricing = "50 for 2";
+    place.images = [];
+    place.images.push("img/food-salad-healthy-vegetables.jpg");
+    place.images.push("img/city-night-evening-river.jpg");
     place.image = "img/food-salad-healthy-vegetables.jpg";
 
     vm.home.places.push(place);
@@ -101,6 +147,9 @@ function controller( $scope ) {
     place.distance = "2.8";
     place.rating = "3.5";
     place.pricing = "50 for 2";
+    place.images = [];
+    place.images.push("img/food-salad-healthy-vegetables.jpg");
+    place.images.push("img/city-night-evening-river.jpg");
     place.image = "img/food-salad-healthy-vegetables.jpg";
 
     vm.home.places.push(place);
@@ -112,6 +161,9 @@ function controller( $scope ) {
     place.distance = "12.8";
     place.rating = "3.5";
     place.pricing = "50 for 2";
+    place.images = [];
+    place.images.push("img/food-salad-healthy-vegetables.jpg");
+    place.images.push("img/city-night-evening-river.jpg");
     place.image = "img/food-salad-healthy-vegetables.jpg";
 
     vm.home.places.push(place);

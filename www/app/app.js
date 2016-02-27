@@ -22,6 +22,11 @@ var app = angular.module('heliounce', ['ionic'])
         url: '/signin',
         templateUrl: 'app/partials/account/signin.html',
         controller: 'heliounce.login as vm'
+    })
+    .state('place', {
+        url: '/place',
+        templateUrl: 'app/partials/place/place.html',
+        controller: 'heliounce.place as vm'
     });
 })
 
