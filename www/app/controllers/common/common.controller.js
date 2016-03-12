@@ -10,6 +10,12 @@ function controller($scope, $location, $ionicSideMenuDelegate) {
     var vm = this;
     vm.controllername = fullname;
 
+    var activatedStr = 'item active';
+    var itemStr = 'item';
+    $scope.foodActivated = activatedStr;
+    $scope.punctureActivated = itemStr;
+    $scope.mechanicActivated = itemStr;
+
     $scope.toggleLeft = function() {
     	$ionicSideMenuDelegate.toggleLeft();
   	};
@@ -21,6 +27,23 @@ function controller($scope, $location, $ionicSideMenuDelegate) {
   	$scope.goHome = function() {
     	$location.path('/home');
   	};
+
+    $scope.getPlaces = function(placeType) {
+      if(placeType=='Puncture') {
+        $scope.foodActivated = itemStr;
+        $scope.punctureActivated = activatedStr;
+        $scope.mechanicActivated = itemStr;
+      } else if(placeType=='Mechanic') {
+        $scope.foodActivated = itemStr;
+        $scope.punctureActivated = itemStr;
+        $scope.mechanicActivated = activatedStr;
+      } else {
+        $scope.foodActivated = activatedStr;
+        $scope.punctureActivated = itemStr;
+        $scope.mechanicActivated = itemStr;
+      }
+    };
+
   	$ionicSideMenuDelegate.canDragContent(true);
 }
 

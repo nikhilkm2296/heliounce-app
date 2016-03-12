@@ -1,20 +1,86 @@
+<!-- Popover html -->
+<script id="place-reviews-modal.html" type="text/ng-template">
+  <ion-modal-view class="hic-modal-view">
+    <ion-content>
+    	<div class="hic-place-reviews list">
+    	  <div class="card" ng-repeat="review in vm.place.selectedPlace.reviews">
+			  <div class="item item-avatar">
+			    <img src="../../img/ionic.png">
+			    <h2 class="hic-modal-header">{{ review.user }}</h2>
+			    <p class="hic-modal-date">Nov 05, 2015</p>
+			  </div>
+			  <div class="hic-place-modal-body item item-body">
+				<p class="hic-modal-content">
+				  {{ review.content }}
+				</p>
+			  </div>
+		  </div>
+    	</div>
+    </ion-content>
+	<ion-footer-bar class="hic-place-footer-bar">
+  		<div class="hic-place-footer-row row">
+  			<div class="col col-80">
+				<textarea row="3" placeholder="Your review" class="hic-place-review" ng-model="place.review"></textarea>
+  			</div>
+  			<div class="col col-20">
+			  	<button class="button">
+	  				<i class="icon ion-paper-airplane"></i>
+				</button>
+  			</div>
+  		</div>
+	</ion-footer-bar>
+  </ion-modal-view>
+</script>
+
 <ion-pane>
 	<ion-header-bar align-title="center">
 	  <button class="button button-clear hic-header-xtreme icon ion-navicon" ng-click="toggleLeft()"></button>
-	  <div class="h1 title hic-header-main">{{ vm.place.selectedPlace.name | uppercase }}</div>
+	  <div class="h1 title hic-header-main">HELIOUNCE</div>
 	  <button class="button button-clear hic-header-xtreme icon ion-navicon" ng-click="toggleRight()"></button>
 	</ion-header-bar>
-	<ion-slides options="vm.home.options" slider="vm.home.data.slider">
-	  <ion-slide-page ng-repeat="image in vm.place.selectedPlace.images">
-	    <div class="box">
-	    	<img ng-src="{{ image }}" height="50%" width="100%" />
-	    </div>
-	  </ion-slide-page>
-	</ion-slides>
+	<div class="hic-place-details-top-div" has-subheader="true">
+		<div class="hic-place-details-trans-wrapper">
+			<div class="row">
+				<div class="col">
+					<h2 class="hic-place-header">
+						{{ vm.place.selectedPlace.name }}
+					</h2>
+				</div>
+			</div>
+			<div class="hic-place-details-buttons">
+				<div class="row">
+					<div class="col">
+						<button class="hic-place-details button button-outline button-light">
+  							<i class="icon ion-thumbsup"></i>
+  							<p class="hic-place-details-button-text">LIKE</p>
+						</button>
+					</div>
+					<div class="col">
+						<button class="hic-place-details button button-outline button-light">
+  							<i class="icon ion-thumbsdown"></i>
+  							<p class="hic-place-details-button-text">DISLIKE</p>
+						</button>
+					</div>
+					<div class="col">
+						<button class="hic-place-details button button-outline button-light" ng-click="openModal($event)">
+  							<i class="icon ion-ios-compose"></i>
+  							<p class="hic-place-details-button-text">REVIEW</p>
+						</button>
+					</div>
+					<div class="col">
+						<button class="hic-place-details button button-outline button-light">
+  							<i class="icon ion-alert-circled"></i>
+  							<p class="hic-place-details-button-text">REPORT</p>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<ion-scroll style="height:60%">
 		<div class="hic-home">
 			<div class="list">
-			    <a class="item">
+			    <a class="hic-place item">
 	      		  <span class="hic-place-header-info">Facilities</span>
 	      		  <div class="hic-place-facility row">
 	      		  	<div class="col">
@@ -38,34 +104,32 @@
 	      		  	  </div>
 	      		  	</div>
 		      	  </div>
+		      	  <hr class="hic" />
+	      	  	  <div class="row">
+	      	  		<div class="col col-50">
+	      		  		<span class="hic-place-header-info">Cost</span>
+	      	  		</div>
+	      	  		<div class="col col-50">
+	      		  		<span class="hic-place-text-info">Approx. {{ vm.place.selectedPlace.pricing }}</span>
+	      	  		</div>
+	      	  	  </div>
+	      	  	  <hr class="hic" />
+	      	  	  <div class="row">
+	      	  		<div class="col col-50">
+	      		  		<span class="hic-place-header-info">Rating</span>
+	      	  		</div>
+	      	  		<div class="col col-50">
+	      		  		<span class="hic-place-text-info">{{ vm.place.selectedPlace.rating }} / 5</span>
+	      	  		</div>
+	      	  	  </div>
 			    </a>
-			    <a class="item">
+			    <a class="item" ng-click="openModal($event)">
 		      	  	<div clas="row">
 		      	  		<div class="col">
-		      		  		<span class="hic-place-header-info">Cost</span>
-		      	  		</div>
-		      	  		<div class="col">
-		      		  		<span class="hic-place-text-info">Approx. {{ vm.place.selectedPlace.pricing }}</span>
-		      	  		</div>
-		      	  	</div>
-			    </a>
-			    <a class="item">
-		      	  	<div clas="row">
-		      	  		<div class="col">
-		      		  		<span class="hic-place-header-info">Rating</span>
-		      	  		</div>
-		      	  		<div class="col">
-		      		  		<span class="hic-place-text-info">{{ vm.place.selectedPlace.rating }}</span>
-		      	  		</div>
-		      	  	</div>
-		      	</a>
-			    <a class="item">
-		      	  	<div clas="row">
-		      	  		<div class="col">
-		      		  		<span class="hic-place-header-info">Reviews</span>
-		      	  		</div>
-		      	  		<div class="col">
-		      		  		<span class="hic-place-text-info">{{ vm.place.selectedPlace.rating }}</span>
+		      		  		<span class="hic-place-header-info">
+		      		  			Reviews & Feedback
+		      		  			<i class="icon-right ion-android-arrow-dropright"></i>
+		      		  		</span>
 		      	  		</div>
 		      	  	</div>
 		      	</a>

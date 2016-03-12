@@ -12,16 +12,18 @@ div {
 	&.#{$hic-css-prefix}-place {
 
 		&-facility-icon {
-			margin-left: 3px;
+			margin-bottom: 5px;
 			@extend .common-text-style-place;
 			border-width: 1px;
 			border-color: $global-text-color;
 			border-style: solid;
 			border-radius: 50%;
-			width: 65px;
-			height: 60px;
+			width: 45px;
+			height: 45px;
 			background: #ff4c4c;
 			color: $global-text-color;
+			margin-left: auto;
+    		margin-right: auto;
 
 			&.available {
 				background : #00b300;
@@ -34,6 +36,63 @@ div {
 				margin: auto;
 			}
 		}
+
+		&-details-top-div {
+			height: 40%;
+			width: 100%;
+			background-image: url('../img/Pav_Bhaji.jpg');
+			background-position: center center;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+
+		&-details-trans-wrapper {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			background-color: black;
+			opacity: 0.85;
+		}
+
+		&-details-buttons {
+			bottom: 0;
+			width: 100%;
+			position: absolute;
+		}
+
+		&-modal-body {
+			padding: 2px 5px 2px 5px;
+		}
+
+		&-reviews {
+			&.list {
+			}
+		}
+
+		&-footer-row {
+			&.row {
+				padding: 0;
+			}
+		}
+
+		&-add-review-btn-container {
+			position: relative;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+button {
+	&.#{$hic-css-prefix}-place-details {
+		width: 80%;
+	}
+}
+
+ion-footer-bar {
+	&.#{$hic-css-prefix}-place-footer-bar {
+		height: 55px;
+		background: $global-bg-color;
 	}
 }
 
@@ -45,12 +104,29 @@ span {
 		&-header-info {
 			text-align: left;
 			@extend .common-text-style-place;
+			font-weight: bolder;
+			font-size: medium;
 		}
 
 		&-text-info {
 			@extend .common-text-style-place;
 			text-transform: none;
-			font-size: 18px;
+			font-size: small;
+		}
+	}
+}
+
+p {
+	&.#{$hic-css-prefix}-place {
+		&-details-button-text {
+			@extend .common-text-style-place;
+			font-size: 5px;
+			margin: 0;
+			padding: 0;
+			color: $global-text-color;
+			text-align: center;
+		    height: 12px;
+		    line-height: 1px;
 		}
 	}
 }
@@ -60,7 +136,37 @@ i {
 		&.icon {
 			display: table;
 			margin: 0 auto;
-			margin-top: 20%;
+			margin-top: 12%;
 		}
+	}
+}
+
+h2 {
+	&.#{$hic-css-prefix}-place {
+		&-header {
+			margin-top: 15%;
+			color: $global-text-color;
+			@extend .common-text-style-place;
+			font-size: medium;
+		}
+	}
+}
+
+a {
+	&.#{$hic-css-prefix}-place {
+		&.item {
+			&.activated {
+				background-color: $global-text-color;
+			}
+		}
+	}
+}
+
+textarea {
+	&.#{$hic-css-prefix}-place-review {
+		@extend .common-text-style-place;
+		color: $global-bg-color;
+		text-transform: none;
+		padding-right: 3px;
 	}
 }

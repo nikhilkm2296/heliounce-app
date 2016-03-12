@@ -7,7 +7,7 @@
 	<ion-slides options="vm.home.options" slider="vm.home.data.slider">
 	  <ion-slide-page ng-repeat="image in vm.home.carouselList">
 	    <div class="box">
-	    	<img ng-src="{{ image }}" height="50%" width="100%" />
+	    	<img ng-src="{{ image }}" height="100%" width="100%" />
 	    </div>
 	  </ion-slide-page>
 	</ion-slides>
@@ -15,16 +15,20 @@
 	<div class="hic-home">
 		<div class="list">
 		    <a class="item item-thumbnail-left" ng-repeat="place in vm.home.places" ng-click="vm.home.setSelectedPlace(place)">
-		      <img src="{{ place.image }}">
+		      <img src="{{ place.image }}" />
 		      <div class="hic-home-place-info-container">
-			      <h2 class="hic-home-place-title">
-			      	{{ place.name }}
-			      	<div class="hic-home-place-rating">
+		      	<div class="row">
+		      		<div class="col col-80">
+				        <h2 class="hic-home-place-title">
+				      	  {{ place.name }}
+				        </h2>
+		      		</div>
+		      		<div class="hic-home-place-rating col">
 				      	<span class="hic-home-place-rating">
 				      		{{ place.rating }} 
 				      	</span>
-			      	</div>
-			      </h2>
+		      		</div>
+		      	</div>
 			      <hr class="hic-home-hr" />
 			      <h3 class="hic-home-place-pricing">
 			      	<span class="hic-home-place-distance">
@@ -37,6 +41,6 @@
 		      </div>
 		    </a>
 		</div>
-	</ion-scroll>
 	</div>
+	</ion-scroll>
 </ion-pane>

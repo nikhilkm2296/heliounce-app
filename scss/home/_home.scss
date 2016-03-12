@@ -35,7 +35,7 @@ hr {
 h2 {
 	&.#{$hic-css-prefix}-home-place-title {
 		color: $global-title-color;
-		margin: 5px;
+		text-overflow: ellipsis;
 		@extend .common-text-style-place-home;
 	}
 }

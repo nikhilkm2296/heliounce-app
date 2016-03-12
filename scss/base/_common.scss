@@ -10,9 +10,50 @@ $gate-btn-register-bg-color: #00AEEF;
   margin: auto;
 }
 
+@media (max-width: 680px) {
+    .active .modal-backdrop-bg {
+    	opacity: .5;
+    	transition: opacity 300ms ease-in-out;
+    	background-color: #000;
+    }
+}
+
+.side-menu-active-style {
+	background-color: $global-title-color;
+	color: $global-text-color;
+}
+
+ion-item {
+	&.#{$hic-css-prefix}-place-type-menu {
+		&.side-menu {
+			&.item {
+				&.active {
+					@extend .side-menu-active-style;
+				}
+			}
+		}
+	}
+}
+
+hr {
+	&.#{$hic-css-prefix} {
+		border-width: thin;
+	}
+}
+
 i {
 	&.icon {
 		font-size: $global-icon-size;
+	}
+}
+
+div {
+	&.swiper-pagination {
+		margin-bottom: 10px;
+	}
+
+	&.col {
+		text-align: center;
 	}
 }
 
@@ -22,8 +63,7 @@ i {
 	font-size: $gate-logo-default-font-size;
 
 	&.activated {
-		background-color: $global-title-color;
-		color: $global-text-color;
+		@extend .side-menu-active-style;
 	}
 
 	&.item-thumbnail-left {
@@ -38,6 +78,7 @@ i {
 span {
 	&.swiper-pagination-bullet {
 		background: $global-title-color;
+		margin-bottom: 5px;
 	}
 
 	&.side-menu {
@@ -68,7 +109,7 @@ button {
 		font-size: $global-text-size;
 
 		&.highlight-blue {
-			background: $gate-btn-register-bg-color;
+ 			background: $gate-btn-register-bg-color;
 			color: $global-text-color;
 		}
 	}
@@ -103,6 +144,55 @@ button {
 	background-size: 100% 100%;
     -webkit-animation: zoom 5s infinite; /* Chrome, Safari, Opera */
     animation: zoom 5s infinite;
+}
+
+h2 {
+	&.#{$hic-css-prefix}-modal {
+		&-header {
+			@extend .common-text-style;
+			color: $global-title-color;
+			font-size: small;
+			font-weight: lighter;
+			text-align: left;
+		}
+	
+	}
+}
+
+ion-modal-view {
+	&.#{$hic-css-prefix}-modal-view {
+		width: 94%; 
+		height: 94%;
+		min-height: 0;
+		max-height: 94%;
+		top: 3%;
+		left: 3%;
+		right: 3%;
+		bottom: 3%;
+	}
+}
+
+p {
+	&.#{$hic-css-prefix}-modal {
+		&-date {
+			color: $global-title-color;
+			font-size: xx-small;
+			font-weight: lighter;
+			text-align: left;
+			text-transform: uppercase;
+		}
+
+		&-content {
+			font-family: opensans-regular;
+			text-align: left;
+			font-size: small;
+		}
+	
+	}
+}
+
+textarea {
+	width: 100%;
 }
 
 /* Chrome, Safari, Opera */

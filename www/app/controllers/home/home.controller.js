@@ -19,6 +19,11 @@ function controller( $scope, $location, PlaceService ) {
         $location.path('/place');
     };
 
+    var review = {};
+    review.user = "Nikhil KM";
+    review.content = "This is a very good place. The hygience is well maintained. You might want to give it a try. I specifically like the vada pav and masala puri over here...";
+    review.rating = "4";
+
     var place = {};
     place.name = "Nanda's Golgappa Shop";
     place.latitude = "";
@@ -26,10 +31,15 @@ function controller( $scope, $location, PlaceService ) {
     place.distance = "2.5";
     place.rating = "3.7";
     place.pricing = "50 for 2";
-    place.disabledFriendly = true;
+    place.disabledFriendly = false;
     place.parking = true;
-    place.cardAvailable = true;
-    place.wifiAvailable = true;
+    place.cardAvailable = false;
+    place.wifiAvailable = false;
+    place.reviews = [];
+    place.reviews.push(review);
+    place.reviews.push(review);
+    place.reviews.push(review);
+    place.reviews.push(review);
     place.images = [];
     place.images.push("img/food-salad-healthy-vegetables.jpg");
     place.images.push("img/city-night-evening-river.jpg");
@@ -48,6 +58,11 @@ function controller( $scope, $location, PlaceService ) {
     place.parking = true;
     place.cardAvailable = true;
     place.wifiAvailable = true;
+    place.reviews = [];
+    place.reviews.push(review);
+    place.reviews.push(review);
+    place.reviews.push(review);
+    place.reviews.push(review);
     place.images = [];
     place.images.push("img/food-salad-healthy-vegetables.jpg");
     place.images.push("img/city-night-evening-river.jpg");
@@ -66,6 +81,11 @@ function controller( $scope, $location, PlaceService ) {
     place.parking = true;
     place.cardAvailable = true;
     place.wifiAvailable = true;
+    place.reviews = [];
+    place.reviews.push(review);
+    place.reviews.push(review);
+    place.reviews.push(review);
+    place.reviews.push(review);
     place.images = [];
     place.images.push("img/food-salad-healthy-vegetables.jpg");
     place.images.push("img/city-night-evening-river.jpg");
@@ -147,6 +167,11 @@ function controller( $scope, $location, PlaceService ) {
     place.distance = "2.8";
     place.rating = "3.5";
     place.pricing = "50 for 2";
+    place.reviews = [];
+    place.reviews.push(review);
+    place.reviews.push(review);
+    place.reviews.push(review);
+    place.reviews.push(review);
     place.images = [];
     place.images.push("img/food-salad-healthy-vegetables.jpg");
     place.images.push("img/city-night-evening-river.jpg");
@@ -178,13 +203,14 @@ function controller( $scope, $location, PlaceService ) {
     vm.home.options = {
       loop: false,
       effect: "fade",
+      autoplay: 3500,
       speed: 500,
     }
-    vm.home.data = {};
-    $scope.$watch('vm.data.slider', function(nv, ov) {
-      console.log('Watch invoked');
-      $scope.vm.slider = $scope.vm.home.data.slider;
-    });
+
+    // vm.home.data = {};
+    // $scope.$watch('vm.home.data.slider', function(nv, ov) {
+    //   vm.home.slider = vm.home.data.slider;
+    // });
 }
 
 controller.$inject = deps;
