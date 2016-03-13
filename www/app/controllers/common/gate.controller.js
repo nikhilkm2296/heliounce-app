@@ -57,28 +57,28 @@ app.controller( fullname, function($scope, $timeout, $location) {
     }, 30);
     $timeout(function() {
         animateTitleLetter($scope, 'e', 0, $timeout, 45);
-    }, 40);
+    }, 45);
     $timeout(function() {
         animateTitleLetter($scope, 'l', 0, $timeout, 50);
     }, 50);
     $timeout(function() {
         animateTitleLetter($scope, 'i', 0, $timeout, 65);
-    }, 60);
+    }, 65);
     $timeout(function() {
         animateTitleLetter($scope, 'o', 0, $timeout, 70);
     }, 70);
     $timeout(function() {
         animateTitleLetter($scope, 'u', 0, $timeout, 75);
-    }, 80);
+    }, 75);
     $timeout(function() {
         animateTitleLetter($scope, 'n', 0, $timeout, 85);
-    }, 90);
+    }, 85);
     $timeout(function() {
         animateTitleLetter($scope, 'c', 0, $timeout, 95);
-    }, 100);
+    }, 95);
     $timeout(function() {
-        animateTitleLetter($scope, 'ee', 0, $timeout, 110);
-    }, 110);
+        animateTitleLetter($scope, 'ee', 0, $timeout, 100);
+    }, 100);
 
     $timeout(function() {
         $location.path("/signin");

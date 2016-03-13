@@ -28,7 +28,7 @@
 <script id="place-add-review-modal.html" type="text/ng-template">
   <ion-modal-view class="hic-add-review-modal-view">
     <ion-content>
-	  <textarea rows="3" placeholder="Write your review" class="hic-place-review"></textarea>
+	  <textarea rows="5" placeholder="Write your review" class="hic-place-review"></textarea>
     </ion-content>
 	<ion-footer-bar class="hic-place-footer-bar">
 	  	<button class="hic-place-review-button button"><i class="icon-left ion-plus-round"> Add your review</i></button>
@@ -81,7 +81,7 @@
 			</div>
 		</div>
 	</div>
-	<ion-scroll style="height:60%">
+	<ion-scroll>
 		<div class="hic-home">
 			<div class="list">
 			    <a class="hic-place item">
@@ -110,19 +110,25 @@
 		      	  </div>
 		      	  <hr class="hic" />
 	      	  	  <div class="row">
-	      	  		<div class="col col-50">
+	      	  		<div class="col col-40">
 	      		  		<span class="hic-place-header-info">Cost</span>
 	      	  		</div>
-	      	  		<div class="col col-50">
+	      	  		<div class="col col-20">
+	      		  		<span class="hic-place-text-info">:</span>
+	      	  		</div>
+	      	  		<div class="col col-40">
 	      		  		<span class="hic-place-text-info">Approx. {{ vm.place.selectedPlace.pricing }}</span>
 	      	  		</div>
 	      	  	  </div>
 	      	  	  <hr class="hic" />
 	      	  	  <div class="row">
-	      	  		<div class="col col-50">
+	      	  		<div class="col col-40">
 	      		  		<span class="hic-place-header-info">Rating</span>
 	      	  		</div>
-	      	  		<div class="col col-50">
+	      	  		<div class="col col-20">
+	      		  		<span class="hic-place-text-info">:</span>
+	      	  		</div>
+	      	  		<div class="col col-40">
 	      		  		<span class="hic-place-text-info">{{ vm.place.selectedPlace.rating }} / 5</span>
 	      	  		</div>
 	      	  	  </div>
