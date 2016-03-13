@@ -75,6 +75,12 @@ div {
 			}
 		}
 
+		&-footer-bar {
+		    position: absolute;
+		    bottom: 0;
+		    width: 100%;
+		}
+
 		&-add-review-btn-container {
 			position: relative;
 			height: 100%;
@@ -84,15 +90,25 @@ div {
 }
 
 button {
-	&.#{$hic-css-prefix}-place-details {
-		width: 80%;
+	&.#{$hic-css-prefix}-place {
+		&-details {
+			width: 80%;
+		}
+
+		&-review-button {
+			background: $global-bg-color;
+			height: 100%;
+			width: 100%;
+			@extend .common-text-style-place;
+			text-align: center;
+		}
 	}
 }
 
 ion-footer-bar {
 	&.#{$hic-css-prefix}-place-footer-bar {
-		height: 55px;
-		background: $global-bg-color;
+		background: transparent;
+		padding: 1px;
 	}
 }
 
@@ -167,6 +183,9 @@ textarea {
 		@extend .common-text-style-place;
 		color: $global-bg-color;
 		text-transform: none;
-		padding-right: 3px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: $global-title-color;
+		height: 99%;
 	}
 }

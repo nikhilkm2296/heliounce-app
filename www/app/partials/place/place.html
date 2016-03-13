@@ -18,16 +18,20 @@
     	</div>
     </ion-content>
 	<ion-footer-bar class="hic-place-footer-bar">
-  		<div class="hic-place-footer-row row">
-  			<div class="col col-80">
-				<textarea row="3" placeholder="Your review" class="hic-place-review" ng-model="place.review"></textarea>
-  			</div>
-  			<div class="col col-20">
-			  	<button class="button">
-	  				<i class="icon ion-paper-airplane"></i>
-				</button>
-  			</div>
-  		</div>
+	  	<button class="hic-place-review-button button" ng-click="openAddReviewModal($event)">
+			<i class="icon-left ion-ios-compose"> Write your review</i>
+		</button>
+	</ion-footer-bar>
+  </ion-modal-view>
+</script>
+
+<script id="place-add-review-modal.html" type="text/ng-template">
+  <ion-modal-view class="hic-add-review-modal-view">
+    <ion-content>
+	  <textarea rows="3" placeholder="Write your review" class="hic-place-review"></textarea>
+    </ion-content>
+	<ion-footer-bar class="hic-place-footer-bar">
+	  	<button class="hic-place-review-button button"><i class="icon-left ion-plus-round"> Add your review</i></button>
 	</ion-footer-bar>
   </ion-modal-view>
 </script>
@@ -62,10 +66,10 @@
 						</button>
 					</div>
 					<div class="col">
-						<button class="hic-place-details button button-outline button-light" ng-click="openModal($event)">
-  							<i class="icon ion-ios-compose"></i>
-  							<p class="hic-place-details-button-text">REVIEW</p>
-						</button>
+					  <button class="hic-place-details button button-outline button-light" ng-click="openReviewsModal($event)">
+						<i class="icon ion-ios-compose"></i>
+						<p class="hic-place-details-button-text">REVIEW</p>
+					  </button>
 					</div>
 					<div class="col">
 						<button class="hic-place-details button button-outline button-light">
@@ -123,7 +127,7 @@
 	      	  		</div>
 	      	  	  </div>
 			    </a>
-			    <a class="item" ng-click="openModal($event)">
+			    <a class="item" ng-click="openReviewsModal($event)">
 		      	  	<div clas="row">
 		      	  		<div class="col">
 		      		  		<span class="hic-place-header-info">
