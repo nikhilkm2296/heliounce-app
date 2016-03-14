@@ -4,9 +4,9 @@ var controllername = 'common';
 var fullname = 'heliounce.' + controllername;
 /*jshint validthis: true */
 
-var deps = [ '$scope', '$location', '$ionicSideMenuDelegate' ];
+var deps = [ '$scope', '$location', '$ionicSideMenuDelegate', '$cordovaGeolocation' ];
 
-function controller($scope, $location, $ionicSideMenuDelegate) {
+function controller($scope, $location, $ionicSideMenuDelegate, $cordovaGeolocation) {
     var vm = this;
     vm.controllername = fullname;
 
@@ -30,6 +30,11 @@ function controller($scope, $location, $ionicSideMenuDelegate) {
 
     $scope.suggestPlace = function() {
       $location.path('/suggestplace');
+    };
+
+    $scope.getCurrentLocation = function() {
+      var posOptions = {timeout: 10000, enableHighAccuracy: false};
+      return $cordovaGeolocation.getCurrentPosition(posOptions);
     };
 
     $scope.getPlaces = function(placeType) {
