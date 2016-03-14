@@ -1,0 +1,85 @@
+<ion-pane>
+	<ion-header-bar align-title="center">
+	  <button class="button button-clear hic-header-xtreme icon ion-ios-arrow-back" ng-click="goHome()"></button>
+	  <div class="h1 title hic-header-main">SUGGEST A PLACE</div>
+	</ion-header-bar>
+	<ion-content has-subheader="true">
+		<div class="list">
+		  <label class="hic-suggestplace item item-input item-stacked-label">
+		    <span class="hic-suggestplace input-label">Place Name</span>
+		    <input type="text" placeholder="Place Name" ng-model="suggestplace.placename">
+		  </label>
+		  <label class="hic-suggestplace item item-input item-stacked-label">
+		    <span class="hic-suggestplace input-label">Rate the place</span>
+		    <div class="hic-suggestplace item range">
+			    <i class="icon ion-sad-outline"></i>
+			    <input type="range" name="rating" min="1" max="5" value="3" ng-model="suggestplace.rating">
+			    <i class="icon ion-happy-outline"></i>
+		  	<!-- <span class="input-label">{{ suggestplace.mood }}</span> -->
+		    </div>
+		  </label>
+		  <label class="hic-suggestplace item item-input item-select">
+		    <div class="hic-suggestplace input-label">
+		      Place Type
+		    </div>
+		    <select ng-model="suggestplace.placetype">
+		      <option>FOOD</option>
+		      <option selected>PUNCTURE</option>
+		      <option>MECHANIC</option>
+		    </select>
+		  </label>
+		  <li class="hic-suggestplace item item-toggle">
+		     Wifi
+		     <label class="toggle toggle-success">
+		       <input type="checkbox" ng-model="suggestplace.wifi">
+		       <div class="track">
+		         <div class="handle"></div>
+		       </div>
+		     </label>
+		  </li>
+		  <li class="hic-suggestplace item item-toggle">
+		     Parking
+		     <label class="toggle toggle-success">
+		       <input type="checkbox" ng-model="suggestplace.parking">
+		       <div class="track">
+		         <div class="handle"></div>
+		       </div>
+		     </label>
+		  </li>
+		  <li class="hic-suggestplace item item-toggle">
+		     Card Payment
+		     <label class="toggle toggle-success">
+		       <input type="checkbox" ng-model="suggestplace.card">
+		       <div class="track">
+		         <div class="handle"></div>
+		       </div>
+		     </label>
+		  </li>
+		  <li class="hic-suggestplace item item-toggle">
+		     Disabled-friendly
+		     <label class="toggle toggle-success">
+		       <input type="checkbox" ng-model="suggestplace.disabledFriendly">
+		       <div class="track">
+		         <div class="handle"></div>
+		       </div>
+		     </label>
+		  </li>
+		  <label class="hic-suggestplace item item-input item-stacked-label">
+		    <span class="input-label">Approx. Cost per person</span>
+		    <input type="number" placeholder="Approx. Cost per person" ng-model="suggestplace.cost">
+		  </label>
+		  <label class="hic-suggestplace item item-input item-stacked-label">
+		    <span class="input-label">Coordinates (Your location)</span>
+		    <input type="text" placeholder="Coordinates" ng-model="suggestplace.coordinates">
+		  </label>
+		  <label class="hic-suggestplace item item-input">
+		    <textarea rows="3" placeholder="Your review" class="hic-suggestplace" ng-model="suggestplace.review"></textarea>
+		  </label>
+		</div>
+	</ion-content>
+	<ion-footer-bar class="hic-place-footer-bar">
+	  	<button class="hic-place-review-button button" ng-click="suggestplace.submitPlace()">
+			<i class="icon-left ion-ios-compose"> Submit the place</i>
+		</button>
+	</ion-footer-bar>
+</ion-pane>

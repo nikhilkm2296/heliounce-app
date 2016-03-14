@@ -25,6 +25,7 @@
     <script src="app/services/place/place.service.js"></script>
     <script src="app/controllers/place/place.controller.js"></script>
     <script src="app/controllers/home/home.controller.js"></script>
+    <script src="app/controllers/suggestplace/suggestplace.controller.js"></script>
   </head>
   <body ng-app="heliounce" ng-controller="heliounce.common">
     <ion-side-menus>
@@ -41,7 +42,7 @@
                         <span class="side-menu">PROFILE</span>
                     </i>
                 </ion-item>
-                <ion-item menu-close="" class="side-menu" ng-click="askAdmin()">
+                <ion-item menu-close="" class="side-menu" ng-click="suggestPlace()">
                     <i class="icon ion-ios-plus-outline"><br>
                         <span class="side-menu">SUGGEST PLACE</span>
                     </i>

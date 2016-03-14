@@ -20669,17 +20669,16 @@ ion-slides {
   height: 40%;
   display: grid; }
 
-.common-text-style, button.hic-buttons, .item-input input, .item-floating-label .input-label.has-input, h2.hic-modal-header, h1.hic-account-logo span {
+.common-text-style, button.hic-buttons, .item-input input, .item-stacked-label .input-label, .item-floating-label .input-label.has-input, h2.hic-modal-header, h1.hic-account-logo span {
   text-transform: uppercase;
   color: #FFF;
-  font-size: 20px;
-  letter-spacing: 0.2em;
-  font-weight: bold;
+  font-size: small;
+  letter-spacing: 0.1em;
   font-family: opensans-regular; }
 
 button.hic-buttons {
   color: #000;
-  width: 180px;
+  width: 150px;
   font-size: small; }
   button.hic-buttons.highlight-blue {
     background: #00AEEF;
@@ -20690,9 +20689,18 @@ button.hic-buttons {
   bottom: 10px;
   width: 100%; }
 
+.item-select select {
+  color: #00AEEF; }
+
+.item-select option {
+  color: #00AEEF; }
+
 .item-input input {
-  color: #FFF;
+  color: #00AEEF;
   text-transform: none; }
+
+.item-stacked-label .input-label {
+  color: #00AEEF; }
 
 .item-floating-label .input-label.has-input {
   color: #00AEEF; }
@@ -20745,35 +20753,12 @@ textarea {
   /* Chrome, Safari, Opera */
   animation: animatedBackground 8s linear 0.5; }
 
-.animate-background-zoom-in {
-  background-position: center;
-  background-size: 100% 100%;
-  -webkit-animation: zoom 5s infinite;
-  /* Chrome, Safari, Opera */
-  animation: zoom 5s infinite; }
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes zoom {
-  50% {
-    background-size: 130% 130%; } }
-
-/* Standard syntax */
-/* Chrome, Safari, Opera */
-@-webkit-keyframes move-left {
-  100% {
-    background-position: center; } }
-
-/* Standard syntax */
-@keyframes mymove {
-  100% {
-    background-position: center; } }
-
 /* Testing */
 @keyframes animatedBackground {
   from {
-    background-position: 10% 0; }
+    background-position: 15% 0; }
   to {
-    background-position: 60% 0; } }
+    background-position: 30% 0; } }
 
 @font-face {
   font-family: opensans;
@@ -20903,7 +20888,7 @@ div.hic-account-logo-container {
   margin-right: auto; }
 
 button.hic-account-signin, button.hic-account-register {
-  padding: 4px;
+  padding: 2px;
   min-height: 30px;
   font-size: 0.875em;
   line-height: 1.75em;
@@ -21085,6 +21070,23 @@ textarea.hic-place-review {
   border-width: 1px;
   border-color: #00AEEF;
   height: 99%; }
+
+.common-suggestplace-label-style, label.hic-suggestplace, span.hic-suggestplace, div.hic-suggestplace, li.hic-suggestplace, textarea.hic-suggestplace {
+  text-align: left;
+  text-transform: uppercase;
+  height: 22%;
+  font-size: small;
+  color: #00AEEF;
+  letter-spacing: 0.1em; }
+
+div.hic-suggestplace.item {
+  border: none; }
+
+div.hic-suggestplace.input-label {
+  color: #00AEEF; }
+
+textarea.hic-suggestplace {
+  text-transform: none; }
 
 .blue span.hic-gate-text-flip.hic-gate-text-flip-highlight {
   color: #00AEEF; }

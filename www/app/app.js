@@ -27,6 +27,11 @@ var app = angular.module('heliounce', ['ionic'])
         url: '/place',
         templateUrl: 'app/partials/place/place.html',
         controller: 'heliounce.place as vm'
+    })
+    .state('suggestplace', {
+        url: '/suggestplace',
+        templateUrl: 'app/partials/suggestplace/suggestplace.html',
+        controller: 'heliounce.suggestplace as vm'
     });
 })
 

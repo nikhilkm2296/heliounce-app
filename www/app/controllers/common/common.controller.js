@@ -28,6 +28,10 @@ function controller($scope, $location, $ionicSideMenuDelegate) {
     	$location.path('/home');
   	};
 
+    $scope.suggestPlace = function() {
+      $location.path('/suggestplace');
+    };
+
     $scope.getPlaces = function(placeType) {
       if(placeType=='Puncture') {
         $scope.foodActivated = itemStr;

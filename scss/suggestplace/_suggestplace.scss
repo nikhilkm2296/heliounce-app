@@ -1,0 +1,46 @@
+.common-suggestplace-label-style {
+	text-align: left;
+	text-transform: uppercase;
+	height: 22%;
+	font-size: $global-text-size;
+	color: $global-title-color;
+	letter-spacing: 0.1em;
+}
+
+label {
+	&.hic-suggestplace {
+		@extend .common-suggestplace-label-style;
+	}
+}
+
+span {
+	&.hic-suggestplace {
+		@extend .common-suggestplace-label-style;
+	}
+}
+
+div {
+	&.hic-suggestplace {
+		@extend .common-suggestplace-label-style;
+		&.item {
+			border: none;
+		}
+
+		&.input-label {
+			color: $global-title-color;
+		}
+	}
+}
+
+li {
+	&.hic-suggestplace {
+		@extend .common-suggestplace-label-style;
+	}
+}
+
+textarea {
+	&.hic-suggestplace {
+		@extend .common-suggestplace-label-style;
+		text-transform: none;
+	}
+}
